@@ -90,10 +90,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\Contracts\IUsuarioFacade.cs" />
+    <Compile Include="Application\Commands\NovoUsuarioCommand.cs" />
+    <Compile Include="Application\Contracts\IUsuarioService.cs" />
     <Compile Include="Application\ResourceAssemblers\UsuarioResourceAssembler.cs" />
     <Compile Include="ApiEstabelecimentos.cs" />
-    <Compile Include="Application\UsuarioFacade.cs" />
+    <Compile Include="Application\UsuarioService.cs" />
     <Compile Include="Domain\NovoEstabelecimentoFavorito.cs" />
     <Compile Include="Domain\AparelhoTelefone.cs" />
     <Compile Include="Domain\Usuario.cs" />
