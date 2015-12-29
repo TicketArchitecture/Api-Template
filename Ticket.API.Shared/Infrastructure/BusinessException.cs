@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Ticket.API.Shared.Infrasctructure
+namespace Ticket.API.Shared.Infrastructure
 {
     public class BusinessException : Exception
     {

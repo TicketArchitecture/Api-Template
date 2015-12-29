@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Resources;
-using System.Text;
-using System.Threading.Tasks;
-using Ticket.API.Shared.Infrasctructure;
+﻿using System.Collections.Generic;
+using Ticket.API.Shared.Infrastructure;
 using Ticket.API.Shared.NH;
-using Ticket.Usuarios.API.V4.Domain.ValueObjects;
 
 namespace Ticket.Usuarios.API.V4.Domain
 {
@@ -17,9 +11,9 @@ namespace Ticket.Usuarios.API.V4.Domain
     /// </summary>
     public class UsuarioDadosMinimos : Entity
     {
-        internal virtual string Nome { get; private set; }
-        internal virtual string Email { get; private set; }
-        internal virtual bool AceitoMkt { get; private set; }
+        protected internal virtual string Nome {  get; protected set; }
+        protected internal virtual string Email { get; protected set; }
+        protected internal virtual bool AceitoMkt { get; protected set; }
 
         public UsuarioDadosMinimos(string nome, string email, bool aceitoMkt)
         {
@@ -41,7 +35,7 @@ namespace Ticket.Usuarios.API.V4.Domain
 
         private void ValidarNome(string nome, ICollection<string> errors)
         {
-            if(string.IsNullOrEmpty(nome)|nome.Length < 10)
+            if(string.IsNullOrEmpty(nome)|nome.Length < 5)
             {
                 errors.Add("Usuario.Nome");
             }

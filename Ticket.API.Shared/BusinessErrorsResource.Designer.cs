@@ -106,6 +106,15 @@ namespace Ticket.API.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O email informado já está em uso. Possivelmente você já possui cadastro conosco..
+        /// </summary>
+        public static string Usuario_Email_Duplicado {
+            get {
+                return ResourceManager.GetString("Usuario.Email.Duplicado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O nome deve conter ao menos 10 caracteres alafanuméricos..
         /// </summary>
         public static string Usuario_Nome {

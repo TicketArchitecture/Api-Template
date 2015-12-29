@@ -2,7 +2,7 @@
 using System.Web.Http;
 using Ticket.API.Shared.Attributes;
 using Ticket.API.Shared.Controllers;
-using Ticket.Usuarios.API.Shared;
+using Ticket.API.Shared;
 using Ticket.Usuarios.API.V4.Application.ResourceAssemblers;
 using Ticket.Usuarios.API.V4.Representations;
 

@@ -12,5 +12,13 @@ namespace Ticket.Usuarios.API.V4.Application.Commands
         public string Email { get; private set; }
         public bool AceitoMkt { get; private set; }
 
+        //não reforce regras de negócio aqui. Deixe-as para as entidades.
+        public NovoUsuarioCommand(string nome, string email, bool aceitoMkt)
+        {
+            Nome = nome;
+            Email = email;
+            AceitoMkt = aceitoMkt;
+        }
+
     }
 }

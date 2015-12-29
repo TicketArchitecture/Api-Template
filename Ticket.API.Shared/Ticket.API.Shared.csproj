@@ -130,8 +130,7 @@
     <Compile Include="Database.cs" />
     <Compile Include="Infrastructure\BusinessException.cs" />
     <Compile Include="Infrastructure\BusinessValidator.cs" />
-    <Compile Include="Infrastructure\DI\IUsuarioFacade.cs" />
-    <Compile Include="Infrastructure\DI\UnityConfig.cs" />
+    <Compile Include="Infrastructure\UnityConfig.cs" />
     <Compile Include="NH\Entity.cs" />
     <Compile Include="NH\NHibernateSessionFactory.cs" />
     <Compile Include="Relation.cs" />

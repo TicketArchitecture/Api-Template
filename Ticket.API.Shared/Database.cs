@@ -6,7 +6,7 @@ using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
 
-namespace Ticket.Usuarios.API.Shared
+namespace Ticket.API.Shared
 {
     public static class Database
     {

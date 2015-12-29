@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Web.Mvc;
-using NHibernate;
-using Ticket.Usuarios.API.Shared;
 
 namespace Ticket.API.Shared.Attributes
 {

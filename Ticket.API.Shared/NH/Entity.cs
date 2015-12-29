@@ -12,6 +12,7 @@ namespace Ticket.API.Shared.NH
     //*http://martinfowler.com/eaaCatalog/layerSupertype.html
     public abstract class Entity
     {
+        
         public virtual int Id { get; private set; }
     }
 }

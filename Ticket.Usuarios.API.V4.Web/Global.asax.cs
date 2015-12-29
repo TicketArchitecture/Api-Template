@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
-using Ticket.Usuarios.API.Shared;
+using Ticket.API.Shared;
 
 namespace Ticket.Usuarios.API.V4.Web
 {
@@ -14,7 +14,7 @@ namespace Ticket.Usuarios.API.V4.Web
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             NHibernate.Glimpse.Plugin.RegisterSessionFactory(Database.Factory);
-            //ContextSessionBuilder.Initialize();
+            Ticket.API.Shared.Infrastructure.UnityConfig.RegistrarTudo();
         }
         protected void Application_BeginRequest()
         {

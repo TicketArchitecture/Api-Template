@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Resources;
 
-namespace Ticket.API.Shared.Infrasctructure { 
+namespace Ticket.API.Shared.Infrastructure { 
 
     public static class BusinessValidator
     {

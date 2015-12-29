@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
-using NHibernate;
-using Ticket.Usuarios.API.Shared;
 
 namespace Ticket.API.Shared.Attributes
 {

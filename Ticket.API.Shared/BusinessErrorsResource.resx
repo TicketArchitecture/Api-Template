@@ -134,6 +134,9 @@
   <data name="Usuario.Email" xml:space="preserve">
     <value>O endereço de email deve conter '@', um domínio e um subdomínio, como em 'ticket@ticket.com.br'</value>
   </data>
+  <data name="Usuario.Email.Duplicado" xml:space="preserve">
+    <value>O email informado já está em uso. Possivelmente você já possui cadastro conosco.</value>
+  </data>
   <data name="Usuario.Nome" xml:space="preserve">
     <value>O nome deve conter ao menos 10 caracteres alafanuméricos.</value>
   </data>

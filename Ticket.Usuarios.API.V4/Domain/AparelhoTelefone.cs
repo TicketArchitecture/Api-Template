@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ticket.API.Shared.Infrasctructure;
+using Ticket.API.Shared.Infrastructure;
 
 namespace Ticket.Usuarios.API.V4.Domain
 {

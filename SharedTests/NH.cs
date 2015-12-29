@@ -2,9 +2,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Microsoft.Practices.Unity;
 using NHibernate;
-using Ticket.API.Shared.Infraestructure.DI;
+using Ticket.API.Shared.Infrastructure;
 using NHibernate.Impl;
-using Ticket.Usuarios.API.Shared;
+using Ticket.API.Shared;
 using NHibernate.Engine;
 using System.Threading;
 using System.Threading.Tasks;

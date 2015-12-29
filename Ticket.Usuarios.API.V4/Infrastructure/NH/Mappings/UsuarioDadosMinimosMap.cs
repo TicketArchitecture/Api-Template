@@ -1,23 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentNHibernate.Mapping;
+﻿using NHibernate.Mapping.ByCode.Conformist;
+using NHibernate.Mapping.ByCode;
 using Ticket.Usuarios.API.V4.Domain;
 
 namespace Ticket.Usuarios.API.V4.Infrastructure.NH.Mappings
 {
-    public class UsuarioDadosMinimosMap : ClassMap<UsuarioDadosMinimos>
+    public class UsuarioDadosMinimosMap : ClassMapping<UsuarioDadosMinimos>
     {
         public UsuarioDadosMinimosMap()
         {
             Table("Usuarios");
-            Id(x => x.Id, "id");
-            Map(x => x.Nome, "nome_completo");
-            Map(x => x.Email, "email");
-            Map(x => x.AceitoMkt, "aceita_mkt");
-                
+            Id(x => x.Id, x =>
+            {
+                x.Column("id");
+                x.Generator(Generators.Native);
+                }
+            
+            );
+            Property(x => x.Nome, x =>
+            {
+                x.Column("nome_completo");
+                x.NotNullable(true);
+            });
+            Property(x => x.Email, x =>
+            {
+                x.Column("email");
+                x.NotNullable(true);
+            });
+            Property(x => x.AceitoMkt, x =>
+            {
+                x.Column("aceita_mkt");
+                x.NotNullable(true);
+            });
+
         }
 
     }
