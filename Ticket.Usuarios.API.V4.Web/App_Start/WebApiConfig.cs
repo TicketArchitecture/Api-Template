@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using Ticket.API.Shared.Infrastructure;
 
 namespace Ticket.Usuarios.API.V4.Web
 {
@@ -24,6 +25,7 @@ namespace Ticket.Usuarios.API.V4.Web
                routeTemplate: "usuarios/v4/",
                defaults: new { controller = "Usuarios", action = "Search" }
            );
+          
         }
     }
 }

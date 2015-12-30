@@ -30,6 +30,8 @@ namespace Ticket.API.Shared.Infrastructure
             AutoRegistrar();
 
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(Container));
+
+
         }
 
         private static void AutoRegistrar()
