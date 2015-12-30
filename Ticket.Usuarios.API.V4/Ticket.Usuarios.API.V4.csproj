@@ -81,6 +81,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -110,7 +111,9 @@
     <Compile Include="IResource.cs" />
     <Compile Include="Version.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Analyzer Include="..\UsuariosV4Tests\libs\System.Data.SQLite.dll" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ticket.API.Shared\Ticket.API.Shared.csproj">
       <Project>{4f554c8b-4259-4ffa-9e53-f062749e0cbf}</Project>

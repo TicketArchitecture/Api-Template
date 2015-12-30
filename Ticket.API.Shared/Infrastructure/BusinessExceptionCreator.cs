@@ -3,11 +3,11 @@ using System.Resources;
 
 namespace Ticket.API.Shared.Infrastructure { 
 
-    public static class BusinessValidator
+    public static class BusinessExceptionCreator
     {
         private static ResourceManager _resource;
 
-        static BusinessValidator()
+        static BusinessExceptionCreator()
         {
             _resource = new ResourceManager("Ticket.API.Shared.BusinessErrorsResource", typeof(BusinessErrorsResource).Assembly);
 

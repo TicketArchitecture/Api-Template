@@ -19,7 +19,7 @@ namespace SharedTests
 
             try
             {
-                BusinessValidator.ThrowBusinessExceptionIfNeeded(listaErro);
+                BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(listaErro);
             }catch(BusinessException be)
             {
                 (be.Data as Dictionary<string,string>).TryGetValue("Shared.Tests",out textoRecebido);
@@ -35,7 +35,7 @@ namespace SharedTests
         {
             var listaErro = new List<string>();
             listaErro.Add("Shared.Tests");
-            BusinessValidator.ThrowBusinessExceptionIfNeeded(listaErro);
+            BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(listaErro);
         }
 
 
@@ -49,7 +49,7 @@ namespace SharedTests
 
             try
             {
-                BusinessValidator.ThrowBusinessExceptionIfNeeded(listaErro);
+                BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(listaErro);
             }
             catch (BusinessException be)
             {
@@ -65,7 +65,7 @@ namespace SharedTests
         {
             var listaErro = new List<string>();
         
-            BusinessValidator.ThrowBusinessExceptionIfNeeded(listaErro);
+            BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(listaErro);
      
         }
 

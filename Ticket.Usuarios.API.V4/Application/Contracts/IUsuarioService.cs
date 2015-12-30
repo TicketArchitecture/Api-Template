@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Ticket.Usuarios.API.V4.Application.Commands;
+using Ticket.Usuarios.API.V4.Representations;
 
 namespace Ticket.Usuarios.API.V4.Application.Contracts
 {
     public interface IUsuarioService
     {
+        UsuarioRepresentation CriarNovoUsuario(NovoUsuarioCommand usuario);
     }
 }

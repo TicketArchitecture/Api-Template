@@ -20,7 +20,7 @@ namespace Ticket.Usuarios.API.V4.Domain
                 erros.Add("NovoEstabelecimentoFavorito.Id");
 
             ValidarNotaAtribuida(notaAtribuida, erros);
-            BusinessValidator.ThrowBusinessExceptionIfNeeded(erros);
+            BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(erros);
 
         }
 
@@ -28,7 +28,7 @@ namespace Ticket.Usuarios.API.V4.Domain
         {
 
             if (!IdValido(id))
-                BusinessValidator.ThrowBusinessExceptionWithResourcesMessage("NovoEstabelecimentoFavorito.Id");
+                BusinessExceptionCreator.ThrowBusinessExceptionWithResourcesMessage("NovoEstabelecimentoFavorito.Id");
         }
 
         

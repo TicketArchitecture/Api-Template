@@ -21,18 +21,12 @@ namespace Ticket.API.Shared.Infrastructure
         //inclua aqui novos namespaces para registro automático
         private static string[] _nameSpacesParaExtracaoDeClassesARegistrar = new[]
         {
-            ".Infrastructure.Repositories",
             ".Application"
         };
         
 
         public static void RegistrarTudo()
         {
-            //Container.RegisterType<ISession>(
-            //    new ContainerControlledLifetimeManager(),
-            //new InjectionFactory(c => Database.OpenSession()));
-
-
             AutoRegistrar();
 
             ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(Container));

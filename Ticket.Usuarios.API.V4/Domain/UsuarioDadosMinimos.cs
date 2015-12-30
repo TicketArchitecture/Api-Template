@@ -21,7 +21,7 @@ namespace Ticket.Usuarios.API.V4.Domain
 
             ValidarNome(nome, erros);
             ValidarEmail(email, erros);
-            BusinessValidator.ThrowBusinessExceptionIfNeeded(erros);
+            BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(erros);
 
             Nome = nome;
             Email = email;

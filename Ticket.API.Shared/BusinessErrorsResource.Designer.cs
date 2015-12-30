@@ -61,6 +61,15 @@ namespace Ticket.API.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Houve um erro inesperado. As informações não foram salvas. Por favor tente novamente..
+        /// </summary>
+        public static string Erro_Inesperado_Insert {
+            get {
+                return ResourceManager.GetString("Erro.Inesperado.Insert", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Esta é uma mensagem de erro padrão. Verifique se utilizou o nome correto do Resource..
         /// </summary>
         public static string Erro_Padrao {

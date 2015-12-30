@@ -13,6 +13,6 @@ namespace Ticket.API.Shared.NH
     public abstract class Entity
     {
         
-        public virtual int Id { get; private set; }
+        public virtual int Id { get; set; }
     }
 }

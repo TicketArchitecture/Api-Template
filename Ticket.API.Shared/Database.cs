@@ -5,6 +5,7 @@ using System.Reflection;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
+using Ticket.API.Shared.NH;
 
 namespace Ticket.API.Shared
 {
@@ -20,7 +21,7 @@ namespace Ticket.API.Shared
 
             mapper.AddMappings(GetAllMappingTypes());
             config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
-
+            config.SetProperty(NHibernate.Cfg.Environment.SqlExceptionConverter, typeof(SqlExceptionConverter).AssemblyQualifiedName);
             Factory = config.BuildSessionFactory();
         }
 
@@ -37,7 +38,13 @@ namespace Ticket.API.Shared
             }
             else
             {
+#if DEBUG
+                session = Factory.OpenSession(new SQLDebugOutputLogger());
+
+#else
                 session = Factory.OpenSession();
+
+#endif
                 NHibernate.Context.CurrentSessionContext.Bind(session);
             }
 

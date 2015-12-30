@@ -17,7 +17,7 @@ namespace Ticket.Usuarios.API.V4.Domain
         public AparelhoTelefone(string numero, string uuid, string sistemaOperacional)
         {
             if (!NumeroValido(numero))
-                BusinessValidator.ThrowBusinessExceptionWithResourcesMessage("AparelhoTelefone.Numero");
+                BusinessExceptionCreator.ThrowBusinessExceptionWithResourcesMessage("AparelhoTelefone.Numero");
 
             Numero = numero;
             UUID = uuid;
