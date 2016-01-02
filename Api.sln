@@ -1,10 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.UsuariosApi", "Ticket.UsuariosApi\Ticket.UsuariosApi.csproj", "{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.API.Shared", "Ticket.API.Shared\Ticket.API.Shared.csproj", "{4F554C8B-4259-4FFA-9E53-F062749E0CBF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticket.Usuarios.API.V4", "Ticket.Usuarios.API.V4\Ticket.Usuarios.API.V4.csproj", "{4CE0DC24-D438-4BBC-9EA8-EA15FC982B91}"
@@ -27,13 +25,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Release|x64.ActiveCfg = Release|Any CPU
-		{CC4A1744-6C95-4FC3-8C4F-394A34E0D40D}.Release|x86.ActiveCfg = Release|Any CPU
 		{4F554C8B-4259-4FFA-9E53-F062749E0CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F554C8B-4259-4FFA-9E53-F062749E0CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F554C8B-4259-4FFA-9E53-F062749E0CBF}.Debug|x64.ActiveCfg = Debug|x64

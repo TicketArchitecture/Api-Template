@@ -1,18 +1,13 @@
-﻿using System;
-using System.Web.Http;
-using Ticket.API.Shared.Attributes;
-using Ticket.API.Shared.Controllers;
+﻿using System.Web.Http;
 using Ticket.API.Shared;
-using Ticket.Usuarios.API.V4.Application.ResourceAssemblers;
-using Ticket.Usuarios.API.V4.Representations;
 using Ticket.Usuarios.API.V4.Application.Commands;
 using Ticket.Usuarios.API.V4.Application.Contracts;
+using Ticket.Usuarios.API.V4.Application.ResourceAssemblers;
+using Ticket.Usuarios.API.V4.Representations;
 
 namespace Ticket.Usuarios.API.V4.Web.Controllers
 {
-    //note que o APIBaseController utiliza um filtro global 
-    //que gerencia a transação automaticamente
-    public class UsuariosController : APIBaseController
+    public class UsuariosController : ApiController
     {
         private readonly IUsuarioService _usuarioService;
 
@@ -32,8 +27,6 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
 
         //Exemplo de Query
         [HttpGet]
-        //utilizando contexto transacional local
-        [APITransactionalActionBase]
         public IHttpActionResult Search(string nome)
         {
             var usuario = Database.Session.QueryOver<UsuarioRepresentation>()

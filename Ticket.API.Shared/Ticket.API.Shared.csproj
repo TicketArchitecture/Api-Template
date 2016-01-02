@@ -110,7 +110,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -118,15 +117,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\APIUseTransactionsByDefaultAttribute.cs" />
-    <Compile Include="Attributes\MVCUseTransactionsByDefaultAttribute.cs" />
     <Compile Include="BusinessErrorsResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BusinessErrorsResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\APIBaseController.cs" />
-    <Compile Include="Controllers\MVCBaseController.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Infrastructure\BusinessException.cs" />
     <Compile Include="Infrastructure\BusinessExceptionCreator.cs" />
