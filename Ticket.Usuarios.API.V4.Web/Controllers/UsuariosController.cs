@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using Ticket.API.Shared;
+using Ticket.API.Shared.Infrastructure;
 using Ticket.Usuarios.API.V4.Application.Commands;
 using Ticket.Usuarios.API.V4.Application.Contracts;
 using Ticket.Usuarios.API.V4.Application.ResourceAssemblers;
@@ -46,7 +47,17 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            var usuarioCriado = _usuarioService.CriarNovoUsuario(novoUsuario);
+            UsuarioRepresentation usuarioCriado = null;
+
+            try
+            {
+                usuarioCriado = _usuarioService.CriarNovoUsuario(novoUsuario);
+            }
+            catch (BusinessException be)
+            {
+                ExceptionConversor.ComplementModelStateErrors(ModelState, be);
+                return BadRequest(ModelState);
+            }
             return GerarResponse(usuarioCriado);
         }
 

@@ -15,32 +15,17 @@ namespace Ticket.Usuarios.API.V4.Web
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             NHibernate.Glimpse.Plugin.RegisterSessionFactory(Database.Factory);
-            
             APIUnityConfig.RegisterComponents();
-
-
-            // Configures container for ASP.NET MVC
-            //DependencyResolver.SetResolver(new Unity.Mvc5.UnityDependencyResolver(UnityConfig.Container));
-
-            // Configures container for WebAPI
-            //GlobalConfiguration.Configuration.DependencyResolver = new Microsoft.Practices.Unity.WWebApi.UnityDependencyResolver(UnityConfig.Container);
-
 
         }
         protected void Application_BeginRequest()
         {
-            //ContextSessionBuilder.OpenSession();
             Database.OpenSession();
-
         }
 
         protected void Application_EndRequest()
         {
-            //ContextSessionBuilder.CloseSession();
             Database.CloseSession();
         }
-
-       
-
     }
 }

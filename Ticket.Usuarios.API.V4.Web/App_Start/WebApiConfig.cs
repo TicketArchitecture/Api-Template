@@ -23,7 +23,7 @@ namespace Ticket.Usuarios.API.V4.Web
             config.Routes.MapHttpRoute(
                name: "Busca_Usuarios",
                routeTemplate: "usuarios/v4/",
-               defaults: new { controller = "Usuarios", action = "Search" }
+               defaults: new { controller = "Usuarios"/*, action = "Search" */}
            );
           
         }

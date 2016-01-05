@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Resources;
 using NHibernate.Exceptions;
 using Ticket.API.Shared.Infrastructure;
 
@@ -6,6 +7,7 @@ namespace Ticket.API.Shared.NH
 {
     public class SqlExceptionConverter : ISQLExceptionConverter
     {
+        private static ResourceManager _resource = new ResourceManager("Ticket.API.Shared.BusinessErrorsResource", typeof(BusinessErrorsResource).Assembly);
 
         public Exception Convert(AdoExceptionContextInfo exInfo)
         {
@@ -21,7 +23,9 @@ namespace Ticket.API.Shared.NH
                 switch (dbException.ErrorCode)
                 {
                     case 19: // violação de constraint
-                        return new BusinessException(field, erro);
+                        var textoPadrao = _resource.GetString("Dado.Duplicado.Nao.Permitido"); //Repetição não permitida para o campo {0}.
+                        erro = String.Format(textoPadrao, field);
+                        return new BusinessException(field, erro);//Dado.Duplicado.Nao.Permitido
 
                 }
             }
@@ -53,8 +57,8 @@ namespace Ticket.API.Shared.NH
 
         private string SQLiteErrorField(string erro)
         {
-            var inicial = erro.IndexOf(":")+1;
-            erro = erro.Remove(0, inicial).Trim();
+            var inicioDispensavel = erro.IndexOf(".")+1;
+            erro = erro.Remove(0, inicioDispensavel).Trim();
             return erro;
         }
 

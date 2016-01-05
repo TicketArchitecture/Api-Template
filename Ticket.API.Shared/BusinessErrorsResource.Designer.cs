@@ -61,6 +61,15 @@ namespace Ticket.API.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Repetição não permitida para o campo {0}..
+        /// </summary>
+        public static string Dado_Duplicado_Nao_Permitido {
+            get {
+                return ResourceManager.GetString("Dado.Duplicado.Nao.Permitido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Houve um erro inesperado. As informações não foram salvas. Por favor tente novamente..
         /// </summary>
         public static string Erro_Inesperado_Insert {
