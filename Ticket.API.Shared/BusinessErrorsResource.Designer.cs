@@ -63,81 +63,90 @@ namespace Ticket.API.Shared {
         /// <summary>
         ///   Looks up a localized string similar to Repetição não permitida para o campo {0}..
         /// </summary>
-        public static string Dado_Duplicado_Nao_Permitido {
+        public static string DadoDuplicadoNaoPermitido {
             get {
-                return ResourceManager.GetString("Dado.Duplicado.Nao.Permitido", resourceCulture);
+                return ResourceManager.GetString("DadoDuplicadoNaoPermitido", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Houve um erro inesperado. As informações não foram salvas. Por favor tente novamente..
         /// </summary>
-        public static string Erro_Inesperado_Insert {
+        public static string ErroInesperadoInsert {
             get {
-                return ResourceManager.GetString("Erro.Inesperado.Insert", resourceCulture);
+                return ResourceManager.GetString("ErroInesperadoInsert", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Esta é uma mensagem de erro padrão. Verifique se utilizou o nome correto do Resource..
         /// </summary>
-        public static string Erro_Padrao {
+        public static string ErroPadrao {
             get {
-                return ResourceManager.GetString("Erro.Padrao", resourceCulture);
+                return ResourceManager.GetString("ErroPadrao", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Id deve ser maior que 0..
         /// </summary>
-        public static string NovoEstabelecimentoFavorito_Id {
+        public static string NovoEstabelecimentoFavoritoId {
             get {
-                return ResourceManager.GetString("NovoEstabelecimentoFavorito.Id", resourceCulture);
+                return ResourceManager.GetString("NovoEstabelecimentoFavoritoId", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to São válidas as notas: 1, 2, 3, 4 e 5..
         /// </summary>
-        public static string NovoEstabelecimentoFavorito_NotaAtribuida {
+        public static string NovoEstabelecimentoFavoritoNotaAtribuida {
             get {
-                return ResourceManager.GetString("NovoEstabelecimentoFavorito.NotaAtribuida", resourceCulture);
+                return ResourceManager.GetString("NovoEstabelecimentoFavoritoNotaAtribuida", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Texto de Teste..
         /// </summary>
-        public static string Shared_Tests {
+        public static string SharedTests {
             get {
-                return ResourceManager.GetString("Shared.Tests", resourceCulture);
+                return ResourceManager.GetString("SharedTests", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O endereço de email deve conter &apos;@&apos;, um domínio e um subdomínio, como em &apos;ticket@ticket.com.br&apos;.
+        ///   Looks up a localized string similar to O Email é obrigatório e deve ser válido. .
         /// </summary>
-        public static string Usuario_Email {
+        public static string UsuarioEmail {
             get {
-                return ResourceManager.GetString("Usuario.Email", resourceCulture);
+                return ResourceManager.GetString("UsuarioEmail", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to O email informado já está em uso. Possivelmente você já possui cadastro conosco..
         /// </summary>
-        public static string Usuario_Email_Duplicado {
+        public static string UsuarioEmailDuplicado {
             get {
-                return ResourceManager.GetString("Usuario.Email.Duplicado", resourceCulture);
+                return ResourceManager.GetString("UsuarioEmailDuplicado", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to O nome deve conter ao menos 10 caracteres alafanuméricos..
         /// </summary>
-        public static string Usuario_Nome {
+        public static string UsuarioNome {
             get {
-                return ResourceManager.GetString("Usuario.Nome", resourceCulture);
+                return ResourceManager.GetString("UsuarioNome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor Nulo não permitido..
+        /// </summary>
+        public static string ValorNuloNaoPermitido {
+            get {
+                return ResourceManager.GetString("ValorNuloNaoPermitido", resourceCulture);
             }
         }
     }

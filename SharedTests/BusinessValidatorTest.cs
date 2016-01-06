@@ -13,7 +13,7 @@ namespace SharedTests
         public void Lanca_Business_Exception_Com_Texto_De_Resource_File()
         {
             var listaErro = new List<string>();
-            listaErro.Add("Shared.Tests");
+            listaErro.Add("SharedTests");
             var textoEsperado = "Texto de Teste.";
             var textoRecebido = string.Empty;
 
@@ -22,7 +22,7 @@ namespace SharedTests
                 BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(listaErro);
             }catch(BusinessException be)
             {
-                (be.Data as Dictionary<string,string>).TryGetValue("Shared.Tests",out textoRecebido);
+                (be.Data as Dictionary<string,string>).TryGetValue("SharedTests",out textoRecebido);
             }
 
             Assert.AreEqual(textoEsperado, textoRecebido);
@@ -34,7 +34,7 @@ namespace SharedTests
         public void Lanca_Business_Exception_Quando_Ha_Item_Lista_De_Erros()
         {
             var listaErro = new List<string>();
-            listaErro.Add("Shared.Tests");
+            listaErro.Add("SharedTests");
             BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(listaErro);
         }
 

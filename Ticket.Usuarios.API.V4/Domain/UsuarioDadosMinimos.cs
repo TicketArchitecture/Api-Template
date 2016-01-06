@@ -37,14 +37,14 @@ namespace Ticket.Usuarios.API.V4.Domain
         {
             if(string.IsNullOrEmpty(nome)|nome.Length < 5)
             {
-                errors.Add("Usuario.Nome");
+                errors.Add("UsuarioNome");
             }
         }
         private void ValidarEmail(string email, ICollection<string> errors)
         {
             if (string.IsNullOrEmpty(email) | !email.Contains("@"))
             {
-                errors.Add("Usuario.Email");
+                errors.Add("UsuarioEmail");
             }
         }
     }

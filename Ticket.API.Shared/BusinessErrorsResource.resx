@@ -117,33 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Dado.Duplicado.Nao.Permitido" xml:space="preserve">
+  <data name="DadoDuplicadoNaoPermitido" xml:space="preserve">
     <value>Repetição não permitida para o campo {0}.</value>
   </data>
-  <data name="Erro.Inesperado.Insert" xml:space="preserve">
+  <data name="ErroInesperadoInsert" xml:space="preserve">
     <value>Houve um erro inesperado. As informações não foram salvas. Por favor tente novamente.</value>
   </data>
-  <data name="Erro.Padrao" xml:space="preserve">
+  <data name="ErroPadrao" xml:space="preserve">
     <value>Esta é uma mensagem de erro padrão. Verifique se utilizou o nome correto do Resource.</value>
     <comment>Utilizado sempre que o BusinessValidator não encontrar o Resource requerido.</comment>
   </data>
-  <data name="NovoEstabelecimentoFavorito.Id" xml:space="preserve">
+  <data name="NovoEstabelecimentoFavoritoId" xml:space="preserve">
     <value>Id deve ser maior que 0.</value>
   </data>
-  <data name="NovoEstabelecimentoFavorito.NotaAtribuida" xml:space="preserve">
+  <data name="NovoEstabelecimentoFavoritoNotaAtribuida" xml:space="preserve">
     <value>São válidas as notas: 1, 2, 3, 4 e 5.</value>
   </data>
-  <data name="Shared.Tests" xml:space="preserve">
+  <data name="SharedTests" xml:space="preserve">
     <value>Texto de Teste.</value>
     <comment>Utilizado em testes unitários</comment>
   </data>
-  <data name="Usuario.Email" xml:space="preserve">
-    <value>O endereço de email deve conter '@', um domínio e um subdomínio, como em 'ticket@ticket.com.br'</value>
+  <data name="UsuarioEmail" xml:space="preserve">
+    <value>O Email é obrigatório e deve ser válido. </value>
   </data>
-  <data name="Usuario.Email.Duplicado" xml:space="preserve">
+  <data name="UsuarioEmailDuplicado" xml:space="preserve">
     <value>O email informado já está em uso. Possivelmente você já possui cadastro conosco.</value>
   </data>
-  <data name="Usuario.Nome" xml:space="preserve">
+  <data name="UsuarioNome" xml:space="preserve">
     <value>O nome deve conter ao menos 10 caracteres alafanuméricos.</value>
+  </data>
+  <data name="ValorNuloNaoPermitido" xml:space="preserve">
+    <value>Valor Nulo não permitido.</value>
   </data>
 </root>

@@ -18,8 +18,6 @@ namespace Ticket.Usuarios.Migrations
             .WithColumn("uuid_telefone").AsString().WithDefaultValue("nao_informado")
             .WithColumn("telefone_validado").AsBoolean().WithDefaultValue(false)
             .WithColumn("sistema_operacional_telefone").AsString().WithDefaultValue("nao_informado");
-
-
         }
 
         public override void Down()

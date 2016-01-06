@@ -17,7 +17,7 @@ namespace Ticket.Usuarios.API.V4.Domain
             ICollection<string> erros = new List<string>();
 
             if (!IdValido(id))
-                erros.Add("NovoEstabelecimentoFavorito.Id");
+                erros.Add("NovoEstabelecimentoFavoritoId");
 
             ValidarNotaAtribuida(notaAtribuida, erros);
             BusinessExceptionCreator.ThrowBusinessExceptionIfNeeded(erros);
@@ -28,14 +28,14 @@ namespace Ticket.Usuarios.API.V4.Domain
         {
 
             if (!IdValido(id))
-                BusinessExceptionCreator.ThrowBusinessExceptionWithResourcesMessage("NovoEstabelecimentoFavorito.Id");
+                BusinessExceptionCreator.ThrowBusinessExceptionWithResourcesMessage("NovoEstabelecimentoFavoritoId");
         }
 
         
         private void ValidarNotaAtribuida(int notaAtribuida, ICollection<string> erros)
         {
             if (notaAtribuida < 0 || notaAtribuida > 5)
-                erros.Add("NovoEstabelecimentoFavorito.NotaAtribuida");
+                erros.Add("NovoEstabelecimentoFavoritoNotaAtribuida");
         }
 
         private bool IdValido(int id)

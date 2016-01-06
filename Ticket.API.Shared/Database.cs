@@ -21,7 +21,6 @@ namespace Ticket.API.Shared
 
             mapper.AddMappings(GetAllMappingTypes());
             config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
-            config.SetProperty(NHibernate.Cfg.Environment.SqlExceptionConverter, typeof(SqlExceptionConverter).AssemblyQualifiedName);
             Factory = config.BuildSessionFactory();
         }
 

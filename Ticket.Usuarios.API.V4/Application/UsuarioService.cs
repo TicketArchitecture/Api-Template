@@ -33,7 +33,7 @@ namespace Ticket.Usuarios.API.V4.Application
             catch (Exception e)
             {
                 //TODO: Log
-                BusinessExceptionCreator.ThrowBusinessExceptionWithResourcesMessage("Erro.Inesperado.Insert");
+                BusinessExceptionCreator.ThrowBusinessExceptionWithResourcesMessage("ErroInesperadoInsert");
             }
 
             return usuarioCriado;

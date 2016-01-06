@@ -40,7 +40,7 @@ namespace Ticket.API.Shared.Infrastructure {
         {
             var textoResource = _resource.GetString(nome);
             if (textoResource == null)
-                textoResource = _resource.GetString("Erro.Padrao");
+                textoResource = _resource.GetString("ErroPadrao");
 
             return textoResource;
         }

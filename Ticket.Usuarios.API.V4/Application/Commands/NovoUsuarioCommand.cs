@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Ticket.API.Shared;
 
 namespace Ticket.Usuarios.API.V4.Application.Commands
 {
     public class NovoUsuarioCommand
     {
-        [MinLength(5,ErrorMessageResourceName ="Usuario.Nome")]
+        [MinLength(5, ErrorMessageResourceName = "UsuarioNome",
+            ErrorMessageResourceType = typeof(BusinessErrorsResource))]
         public string Nome { get; private set; }
 
-        [DataType(DataType.EmailAddress)]
+        [DataType(DataType.EmailAddress, ErrorMessageResourceName = "UsuarioEmail", 
+            ErrorMessageResourceType =typeof(BusinessErrorsResource))]
         public string Email { get; private set; }
         public bool AceitoMkt { get; private set; }
 
