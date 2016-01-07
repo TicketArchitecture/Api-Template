@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Ticket.Usuarios.API.V4
 {
@@ -10,7 +7,9 @@ namespace Ticket.Usuarios.API.V4
     {
         private static string _relPrefix = "/rels/";
         private static string _self = "self";
+        [JsonProperty(PropertyName = "rel")]
         public string Rel { get; set; }
+        [JsonProperty(PropertyName = "uri")]
         public string Uri { get; set; }
 
         /// <summary>

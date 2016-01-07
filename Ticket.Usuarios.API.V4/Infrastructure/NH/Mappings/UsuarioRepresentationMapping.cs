@@ -36,7 +36,7 @@ namespace Ticket.Usuarios.API.V4.Infrastructure.NH.Mappings
                 x.NotNullable(true);
             });
 
-            Component<AparelhoTelefone>(x => x.Telefone, x =>
+            Component<AparelhoTelefoneRepresentation>(x => x.Telefone, x =>
             {
                 x.Property(y => y.Numero, y => y.Column("numero_telefone"));
                 x.Property(y => y.SistemaOperacional, y => y.Column("sistema_operacional_telefone"));

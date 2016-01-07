@@ -130,9 +130,7 @@
     <Compile Include="NH\SQLDebugOutputLogger.cs" />
     <Compile Include="NH\SQLiteSqlExceptionConverter.cs" />
     <Compile Include="NH\SQLServerSqlExceptionConverter.cs" />
-    <Compile Include="Relation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Representation.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="BusinessErrorsResource.resx">

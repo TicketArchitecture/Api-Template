@@ -9,10 +9,11 @@ namespace Ticket.Usuarios.API.V4.Web
     {
         public static void RegisterComponents()
         {
-            UnityConfig.RegistrarTudo();
+            //se realmente precisarmos de DI...
+            //UnityConfig.RegistrarTudo();
 
             //isto só serve para web API
-            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(UnityConfig.Container);
+            //GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(UnityConfig.Container);
         }
     }
 }

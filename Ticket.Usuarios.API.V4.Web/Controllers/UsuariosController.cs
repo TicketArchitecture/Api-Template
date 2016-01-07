@@ -2,7 +2,7 @@
 using Ticket.API.Shared;
 using Ticket.API.Shared.Infrastructure;
 using Ticket.Usuarios.API.V4.Application.Commands;
-using Ticket.Usuarios.API.V4.Application.Contracts;
+using Ticket.Usuarios.API.V4.Application;
 using Ticket.Usuarios.API.V4.Application.ResourceAssemblers;
 using Ticket.Usuarios.API.V4.Representations;
 
@@ -10,11 +10,11 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
 {
     public class UsuariosController : ApiController
     {
-        private readonly IUsuarioService _usuarioService;
+        private readonly UsuarioService _usuarioService;
 
-        public UsuariosController(IUsuarioService usuarioService)
+        public UsuariosController()
         {
-            _usuarioService = usuarioService;
+            _usuarioService = new UsuarioService();
 
         }
 
@@ -38,7 +38,7 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
         }
 
         //exemplo de comando.
-        //note que o Model é um command, decorado com algumas regras de validação
+        //note que o ViewModel é um command, decorado com algumas regras de validação
         [HttpPost]
         public IHttpActionResult Novo(NovoUsuarioCommand novoUsuario)
         {

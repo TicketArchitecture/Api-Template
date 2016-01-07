@@ -133,7 +133,7 @@ namespace Ticket.API.Shared {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to O nome deve conter ao menos 10 caracteres alafanuméricos..
+        ///   Looks up a localized string similar to O nome deve conter ao menos 5 caracteres alfanuméricos..
         /// </summary>
         public static string UsuarioNome {
             get {
