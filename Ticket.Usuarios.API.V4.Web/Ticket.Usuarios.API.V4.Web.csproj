@@ -162,7 +162,7 @@
     <Compile Include="App_Start\APIUnityConfig.cs" />
     <Compile Include="App_Start\DebugMigrationDBConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\UsuariosController.cs" />
+    <Compile Include="Controllers\UsuariosV4Controller.cs" />
     <Compile Include="ExceptionConversor.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">

@@ -62,7 +62,7 @@ namespace Ticket.API.Shared.NH
             {
                 case "UNIQUE":
                     textoResource = _resource.GetString("DadoDuplicadoNaoPermitido"); //Repetição não permitida para o campo {0}.
-                    return new BusinessException(campo, textoResource);//DadoDuplicadoNaoPermitido
+                    return new BusinessException(campo, string.Format(textoResource,campo));//DadoDuplicadoNaoPermitido
 
                 case "NOT NULL":
                     textoResource = _resource.GetString("ValorNuloNaoPermitido");

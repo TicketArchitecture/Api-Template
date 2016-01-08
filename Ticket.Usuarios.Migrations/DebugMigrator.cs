@@ -50,6 +50,7 @@ namespace Ticket.Usuarios.Migrations
             using (var processor = factory.Create(connectionString, announcer, options))
             {
                 var runner = new MigrationRunner(assembly, migrationContext, processor);
+                runner.MigrateDown(0);
                 runner.MigrateUp(true);
             }
         }

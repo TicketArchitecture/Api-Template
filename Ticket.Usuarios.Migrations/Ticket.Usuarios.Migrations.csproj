@@ -50,7 +50,8 @@
   <ItemGroup>
     <Compile Include="CreateUsersTable.cs" />
     <Compile Include="DebugMigrator.cs" />
-    <Compile Include="Mig0001_ChangeUsersTable.cs" />
+    <Compile Include="Mig0003_EmailUnique.cs" />
+    <Compile Include="Mig0002_ChangeUsersTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -18,6 +18,9 @@ namespace Ticket.Usuarios.Migrations
             .WithColumn("uuid_telefone").AsString().WithDefaultValue("nao_informado")
             .WithColumn("telefone_validado").AsBoolean().WithDefaultValue(false)
             .WithColumn("sistema_operacional_telefone").AsString().WithDefaultValue("nao_informado");
+#if DEBUG
+            this.Execute.Sql("Insert into Usuarios (nome_completo,email, aceita_mkt) Values (\"usuario teste\",\"email@teste.com\",1)");
+#endif
         }
 
         public override void Down()

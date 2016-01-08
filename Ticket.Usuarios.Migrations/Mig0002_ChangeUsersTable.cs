@@ -8,7 +8,7 @@ using FluentMigrator;
 namespace Ticket.Usuarios.Migrations
 {
     [Migration(2)]
-    public class Mig0001_ChangeUsersTable : Migration
+    public class Mig0002_ChangeUsersTable : Migration
     {
         public override void Down()
         {

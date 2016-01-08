@@ -8,11 +8,11 @@ using Ticket.Usuarios.API.V4.Representations;
 
 namespace Ticket.Usuarios.API.V4.Web.Controllers
 {
-    public class UsuariosController : ApiController
+    public class UsuariosV4Controller : ApiController
     {
         private readonly UsuarioService _usuarioService;
 
-        public UsuariosController()
+        public UsuariosV4Controller()
         {
             _usuarioService = new UsuarioService();
 
