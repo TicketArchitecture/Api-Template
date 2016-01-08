@@ -7,7 +7,6 @@ namespace Ticket.API.Shared.NH
 {
     public class SQLiteSqlExceptionConverter : ISQLExceptionConverter
     {
-        private static ResourceManager _resource = new ResourceManager("Ticket.API.Shared.BusinessErrorsResource", typeof(BusinessErrorsResource).Assembly);
 
         public Exception Convert(AdoExceptionContextInfo exInfo)
         {
@@ -61,11 +60,11 @@ namespace Ticket.API.Shared.NH
             switch (erro)
             {
                 case "UNIQUE":
-                    textoResource = _resource.GetString("DadoDuplicadoNaoPermitido"); //Repetição não permitida para o campo {0}.
+                    textoResource = BusinessErrorsResource.DadoDuplicadoNaoPermitido; //Repetição não permitida para o campo {0}.
                     return new BusinessException(campo, string.Format(textoResource,campo));//DadoDuplicadoNaoPermitido
 
                 case "NOT NULL":
-                    textoResource = _resource.GetString("ValorNuloNaoPermitido");
+                    textoResource = BusinessErrorsResource.ValorNuloNaoPermitido;
                     return new BusinessException(campo, textoResource);//DadoDuplicadoNaoPermitido
 
                 case "PRIMARY KEY":
