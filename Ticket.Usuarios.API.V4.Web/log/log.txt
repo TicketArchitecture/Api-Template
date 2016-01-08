@@ -1,0 +1,1 @@
+INFO  2016-01-08 17:11:26,300   184ms WebApiApplication      Application_Start  - Configurado
