@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Threading;
+using System.Web.Http;
 using log4net;
 using Ticket.API.Shared;
 using Ticket.API.Shared.Logging;
@@ -11,8 +12,15 @@ namespace Ticket.Usuarios.API.V4.Web
         protected void Application_Start()
         {
             log4net.Config.XmlConfigurator.Configure();
-            log4net.GlobalContext.Properties["GCAllocatedBytesHelper"] = new GCAllocatedBytesHelper();
+
+            if (_log.IsDebugEnabled)
+            {
+                GlobalContext.Properties["GCAllocatedBytesHelper"] = new GCAllocatedBytesHelper();
+                GlobalContext.Properties["AverageCPUUsageHelper"] = new AverageCPUUsageHelper();
+            }
+
             _log.Info("Configurado");
+            _log.Debug("Configurado em DEBUG");
 
             GlobalConfiguration.Configure(WebApiConfig.Register);
             NHibernate.Glimpse.Plugin.RegisterSessionFactory(Database.Factory);
@@ -21,11 +29,12 @@ namespace Ticket.Usuarios.API.V4.Web
             //APIUnityConfig.RegisterComponents();
 
 #if DEBUG
-            DebugMigrationDBConfig.MigrateDatabase("Data Source=|DataDirectory|demo.db;Version=3");
+           // DebugMigrationDBConfig.MigrateDatabase("Data Source=|DataDirectory|demo.db;Version=3");
 #endif
         }
         protected void Application_BeginRequest()
         {
+            _log.Error("erro no beginRequest");
             Database.OpenSession();
         }
 

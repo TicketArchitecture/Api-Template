@@ -10,6 +10,7 @@ namespace Ticket.API.Shared.Logging
     {
         public override string ToString()
         {
+            
             return GC.GetTotalMemory(true).ToString();
         }
     }
