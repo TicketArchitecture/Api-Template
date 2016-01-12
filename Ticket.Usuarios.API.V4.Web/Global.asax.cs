@@ -17,6 +17,9 @@ namespace Ticket.Usuarios.API.V4.Web
             {
                 GlobalContext.Properties["GCAllocatedBytesHelper"] = new GCAllocatedBytesHelper();
                 GlobalContext.Properties["AverageCPUUsageHelper"] = new AverageCPUUsageHelper();
+                GlobalContext.Properties["CPUUsageHelper"] = new CPUUsageHelper();
+                GlobalContext.Properties["DiskUsageHelper"] = new DiskUsageHelper();
+                //TODO: Obter quantidade de conexões por IP de destino desta aplicação
             }
 
             _log.Info("Configurado");

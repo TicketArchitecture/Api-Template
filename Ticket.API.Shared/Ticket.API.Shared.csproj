@@ -131,8 +131,7 @@
     <Compile Include="Infrastructure\BusinessException.cs" />
     <Compile Include="Infrastructure\BusinessExceptionCreator.cs" />
     <Compile Include="Infrastructure\UnityConfig.cs" />
-    <Compile Include="Logging\AverageCPUUsageHelper.cs" />
-    <Compile Include="Logging\GCAllocatedBytesHelper.cs" />
+    <Compile Include="Logging\HardwareUsageHelpers.cs" />
     <Compile Include="NH\Entity.cs" />
     <Compile Include="NH\SQLDebugOutputLogger.cs" />
     <Compile Include="NH\SQLiteSqlExceptionConverter.cs" />
