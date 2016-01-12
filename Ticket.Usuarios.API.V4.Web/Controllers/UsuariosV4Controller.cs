@@ -69,7 +69,7 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
 
             UsuarioResourceAssembler.AddRelationLinks(usuario, Request.RequestUri);
 
-            return Json<UsuarioRepresentation>(usuario);
+            return Ok(usuario);
 
         }
     }
