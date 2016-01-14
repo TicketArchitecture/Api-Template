@@ -137,6 +137,15 @@
     <value>Texto de Teste.</value>
     <comment>Utilizado em testes unitários</comment>
   </data>
+  <data name="TelefoneNumero" xml:space="preserve">
+    <value>Número de telefone inválido.</value>
+  </data>
+  <data name="TelefoneSistemaOperacional" xml:space="preserve">
+    <value>SO é obrigatório.</value>
+  </data>
+  <data name="TelefoneUUID" xml:space="preserve">
+    <value>UUID é obrigatório.</value>
+  </data>
   <data name="UsuarioEmail" xml:space="preserve">
     <value>O Email é obrigatório e deve ser válido. </value>
   </data>

@@ -166,6 +166,7 @@
     <Compile Include="App_Start\APIUnityConfig.cs" />
     <Compile Include="App_Start\DebugMigrationDBConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\UsuariosV5Controller.cs" />
     <Compile Include="Controllers\UsuariosV4Controller.cs" />
     <Compile Include="ExceptionConversor.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
@@ -197,6 +198,10 @@
     <ProjectReference Include="..\Ticket.Usuarios.API.V4\Ticket.Usuarios.API.V4.csproj">
       <Project>{4ce0dc24-d438-4bbc-9ea8-ea15fc982b91}</Project>
       <Name>Ticket.Usuarios.API.V4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ticket.Usuarios.API.V5\Ticket.Usuarios.API.V5.csproj">
+      <Project>{796d2471-cfcf-4c23-8ab7-997505e16107}</Project>
+      <Name>Ticket.Usuarios.API.V5</Name>
     </ProjectReference>
     <ProjectReference Include="..\Ticket.Usuarios.Migrations\Ticket.Usuarios.Migrations.csproj">
       <Project>{f75d5f60-4abf-4a92-ac82-3b0fdf243dfb}</Project>

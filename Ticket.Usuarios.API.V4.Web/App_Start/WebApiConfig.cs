@@ -31,7 +31,14 @@ namespace Ticket.Usuarios.API.V4.Web
                routeTemplate: "usuarios/v4/",
                defaults: new { controller = "UsuariosV4"}
            );
-          
+
+            config.Routes.MapHttpRoute(
+               name: "Cria_Usuario_Complexo",
+               routeTemplate: "usuarios/v5/",
+               defaults: new { controller = "UsuariosV5" }
+           );
+
+
         }
     }
 }

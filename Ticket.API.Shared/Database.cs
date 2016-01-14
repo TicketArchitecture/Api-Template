@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using log4net;
+using log4net.Core;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
@@ -12,16 +14,29 @@ namespace Ticket.API.Shared
     public static class Database
     {
         public static ISessionFactory Factory { get; private set; }
+        private static ILog _log = LogManager.GetLogger(typeof(Database));
 
         static Database()
         {
-            var config = new Configuration();
-            config.Configure();
-            var mapper = new ModelMapper();
+            try
+            {
+                var config = new Configuration();
+                config.Configure();
 
-            mapper.AddMappings(GetAllMappingTypes());
-            config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
-            Factory = config.BuildSessionFactory();
+                var mapper = new ModelMapper();
+                mapper.AddMappings(GetAllMappingTypes());
+
+                var compileMapping = mapper.CompileMappingForAllExplicitlyAddedEntities();
+                compileMapping.autoimport = false;
+                config.AddMapping(compileMapping);
+
+                Factory = config.BuildSessionFactory();
+            }
+            catch (Exception e)
+            {
+                _log.Fatal(e);
+                throw;
+            }
         }
 
         public static ISession OpenSession()

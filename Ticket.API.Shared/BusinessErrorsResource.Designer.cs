@@ -115,6 +115,33 @@ namespace Ticket.API.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Número de telefone inválido..
+        /// </summary>
+        public static string TelefoneNumero {
+            get {
+                return ResourceManager.GetString("TelefoneNumero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SO é obrigatório..
+        /// </summary>
+        public static string TelefoneSistemaOperacional {
+            get {
+                return ResourceManager.GetString("TelefoneSistemaOperacional", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UUID é obrigatório..
+        /// </summary>
+        public static string TelefoneUUID {
+            get {
+                return ResourceManager.GetString("TelefoneUUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O Email é obrigatório e deve ser válido. .
         /// </summary>
         public static string UsuarioEmail {

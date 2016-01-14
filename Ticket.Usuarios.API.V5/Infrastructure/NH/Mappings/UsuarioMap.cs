@@ -1,14 +1,21 @@
-﻿using NHibernate.Mapping.ByCode.Conformist;
-using Ticket.Usuarios.API.V4.Domain;
+﻿using NHibernate.Mapping.ByCode;
+using NHibernate.Mapping.ByCode.Conformist;
+using Ticket.Usuarios.API.V5.Domain;
 
-namespace Ticket.Usuarios.API.V4.Infrastructure.NH.Mappings
+namespace Ticket.Usuarios.API.V5.Infrastructure.NH.Mappings
 {
-    public class UsuarioMap: ClassMapping<Usuario>
+    public class UsuarioMap : ClassMapping<Usuario>
     {
         public UsuarioMap()
         {
             Table("Usuarios");
-            Id(x => x.Id, x => x.Column("id"));
+            Id(x => x.Id, x =>
+            {
+                x.Column("id");
+                x.Generator(Generators.Native);
+            }
+
+            );
             Property(x => x.Nome, x =>
             {
                 x.Column("nome_completo");
