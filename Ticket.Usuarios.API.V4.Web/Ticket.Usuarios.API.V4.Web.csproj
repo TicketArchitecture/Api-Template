@@ -166,6 +166,7 @@
     <Compile Include="App_Start\APIUnityConfig.cs" />
     <Compile Include="App_Start\DebugMigrationDBConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DebugController.cs" />
     <Compile Include="Controllers\UsuariosV5Controller.cs" />
     <Compile Include="Controllers\UsuariosV4Controller.cs" />
     <Compile Include="ExceptionConversor.cs" />

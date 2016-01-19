@@ -3,7 +3,6 @@ using log4net;
 using Ticket.API.Shared;
 using Ticket.API.Shared.Infrastructure;
 using Ticket.Usuarios.API.V5.Application.Commands;
-using Ticket.Usuarios.API.V5.Domain;
 using Ticket.Usuarios.API.V5.Representations;
 
 namespace Ticket.Usuarios.API.V5.Application
@@ -27,10 +26,13 @@ namespace Ticket.Usuarios.API.V5.Application
                 //as camadas superiores (WEB/API) devem sempre receber uma representação web, jamais os objetos de domínio
                 usuarioCriado = Database.Session.Get<UsuarioRepresentation>(novoUsuario.Id);
             }
-            //TODO: separar os tipos de erros: negócio e infra
+
+            //Erro de negócio tem duas origens:
+            //1. invariants (regras de negócio) da própria Entidade de negócio
+            //2. db constraint: veja como ela é gerada em Ticket.API.Shared.NH.SQL*ExceptionConverter
             catch (BusinessException e)
             {
-                _log.Error(e);
+                _log.Debug(e);
                 throw;
             }
             catch (Exception e)

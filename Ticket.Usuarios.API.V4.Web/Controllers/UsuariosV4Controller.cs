@@ -5,11 +5,15 @@ using Ticket.Usuarios.API.V4.Application.Commands;
 using Ticket.Usuarios.API.V4.Application;
 using Ticket.Usuarios.API.V4.Application.ResourceAssemblers;
 using Ticket.Usuarios.API.V4.Representations;
+using log4net;
+using System.Collections.Generic;
 
 namespace Ticket.Usuarios.API.V4.Web.Controllers
 {
     public class UsuariosV4Controller : ApiController
     {
+        private static readonly ILog _log = LogManager.GetLogger(typeof(UsuariosV4Controller).FullName);
+
         private readonly UsuarioService _usuarioService;
 
         public UsuariosV4Controller()
@@ -22,7 +26,7 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
         public IHttpActionResult GetById(int id)
         {
             var usuario = Database.Session.Get<UsuarioRepresentation>(id);
-
+            throw new System.Exception("Erro intencional");
             return GerarResponse(usuario);
         }
 
@@ -30,11 +34,11 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
         [HttpGet]
         public IHttpActionResult Search(string nome)
         {
-            var usuario = Database.Session.QueryOver<UsuarioRepresentation>()
-                .WhereRestrictionOn(m => m.Nome).IsInsensitiveLike(nome)
-                .SingleOrDefault();
+            var usuarios = Database.Session.QueryOver<UsuarioRepresentation>()
+                .WhereRestrictionOn(m => m.Nome).IsInsensitiveLike(nome, NHibernate.Criterion.MatchMode.Anywhere)
+                .List<UsuarioRepresentation>();
 
-            return GerarResponse(usuario);
+            return GerarResponse(usuarios);
         }
 
         //exemplo de comando.
@@ -64,12 +68,27 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
 
         private IHttpActionResult GerarResponse(UsuarioRepresentation usuario)
         {
+            if (_log.IsDebugEnabled)
+                _log.Debug(Request.RequestUri.ToString());
+
             if (usuario == null)
                 return NotFound();
 
             UsuarioResourceAssembler.AddRelationLinks(usuario, Request.RequestUri);
 
             return Ok(usuario);
+
+        }
+
+        private IHttpActionResult GerarResponse(IList<UsuarioRepresentation> usuarios)
+        {
+            if (usuarios.Count == 0)
+                return NotFound();
+
+            foreach(var usuario in usuarios)
+                UsuarioResourceAssembler.AddRelationLinks(usuario, Request.RequestUri);
+
+            return Ok(usuarios);
 
         }
     }

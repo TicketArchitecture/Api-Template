@@ -5,11 +5,14 @@ using Ticket.Usuarios.API.V5.Application.Commands;
 using Ticket.Usuarios.API.V5.Application;
 using Ticket.Usuarios.API.V5.Application.ResourceAssemblers;
 using Ticket.Usuarios.API.V5.Representations;
+using log4net;
 
 namespace Ticket.Usuarios.API.V4.Web.Controllers
 {
     public class UsuariosV5Controller : ApiController
     {
+        private static readonly ILog _log = LogManager.GetLogger(typeof(UsuariosV5Controller).FullName);
+
         private readonly UsuarioService _usuarioService;
 
         public UsuariosV5Controller()
@@ -17,8 +20,7 @@ namespace Ticket.Usuarios.API.V4.Web.Controllers
             _usuarioService = new UsuarioService();
 
         }
-
-     
+   
 
         //exemplo de comando.
         //note que o ViewModel é um command, decorado com algumas regras de validação

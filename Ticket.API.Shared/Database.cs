@@ -74,6 +74,7 @@ namespace Ticket.API.Shared
 
         public static void CloseSession()
         {
+            _log.Debug("Entity instances on Session: " + Session.Statistics.EntityCount);
             Factory.GetCurrentSession().Close();
         }
        
@@ -82,7 +83,12 @@ namespace Ticket.API.Shared
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
                 if (assembly.FullName.StartsWith("Ticket.Usuarios.API.V"))
+                {
+                    if (_log.IsDebugEnabled)
+                        _log.Debug("NH Mapping Assembly adicionado: " + assembly.ToString());
+
                     yield return assembly;
+                }
             }
 
         }
@@ -93,6 +99,11 @@ namespace Ticket.API.Shared
             var tipos = new List<Type>();
             foreach (var assembly in ticketAssemblies)
                 tipos.AddRange(assembly.ExportedTypes.Where(x => x.Namespace.Contains(".Mappings")));
+
+            if (_log.IsDebugEnabled)
+                foreach (var clazz in tipos)
+                    _log.Debug("NH mapping adicionado: " + clazz.FullName);
+
             return tipos;
         }
 

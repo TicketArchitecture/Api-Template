@@ -128,9 +128,12 @@
       <DependentUpon>BusinessErrorsResource.resx</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
+    <Compile Include="Filters\DebugLogMessageFilter.cs" />
+    <Compile Include="Filters\ExceptionLoggingFilterAttribute.cs" />
     <Compile Include="Infrastructure\BusinessException.cs" />
     <Compile Include="Infrastructure\BusinessExceptionCreator.cs" />
     <Compile Include="Infrastructure\UnityConfig.cs" />
+    <Compile Include="Logging\DebugSetup.cs" />
     <Compile Include="Logging\HardwareUsageHelpers.cs" />
     <Compile Include="NH\Entity.cs" />
     <Compile Include="NH\SQLDebugOutputLogger.cs" />

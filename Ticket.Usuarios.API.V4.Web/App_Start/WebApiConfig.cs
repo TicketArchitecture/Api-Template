@@ -2,10 +2,13 @@
 
 namespace Ticket.Usuarios.API.V4.Web
 {
+    using log4net;
     using Newtonsoft.Json.Serialization;
 
     public static class WebApiConfig
     {
+        private static readonly ILog _log = LogManager.GetLogger(typeof(WebApiConfig));
+
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
@@ -38,6 +41,23 @@ namespace Ticket.Usuarios.API.V4.Web
                defaults: new { controller = "UsuariosV5" }
            );
 
+            config.Routes.MapHttpRoute(
+              name: "Debug",
+              routeTemplate: "debug/{on}",
+              defaults: new { controller = "Debug" }
+          );
+
+            if (_log.IsDebugEnabled)
+                foreach (var rota in config.Routes)
+                {
+                    if (string.IsNullOrEmpty(rota.RouteTemplate))
+                        continue;
+
+                    _log.Debug("template: " + rota.RouteTemplate);
+                    foreach (var valorDefault in rota.Defaults)
+                        _log.Debug(valorDefault.Key + " : " + valorDefault.Value);
+
+                }
 
         }
     }
