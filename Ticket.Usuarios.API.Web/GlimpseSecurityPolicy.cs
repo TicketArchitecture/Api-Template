@@ -4,7 +4,7 @@
 using Glimpse.AspNet.Extensions;
 using Glimpse.Core.Extensibility;
 
-namespace Ticket.Usuarios.API.V4.Web
+namespace Ticket.Usuarios.API.Web
 {
     public class GlimpseSecurityPolicy:IRuntimePolicy
     {

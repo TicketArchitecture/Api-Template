@@ -11,5 +11,6 @@ This allows us having many versions of the same endpoint in a very simple way.</
 <li>Test your Domain Entities behavior.</li>
 <li>Separate your bussiness (Domain Entities) from your Representations (Models).</li>
 <li>Have different classes to different visions/stages from the same Entities.</li>
+<li>Deliver really usefull debugging log.</li>
 </ul>
 </p>

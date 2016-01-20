@@ -3,7 +3,7 @@ using System.Web.Http;
 using Unity.WebApi;
 using Ticket.API.Shared.Infrastructure;
 
-namespace Ticket.Usuarios.API.V4.Web
+namespace Ticket.Usuarios.API.Web
 {
     public static class APIUnityConfig
     {

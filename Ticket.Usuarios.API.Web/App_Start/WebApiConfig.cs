@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace Ticket.Usuarios.API.V4.Web
+namespace Ticket.Usuarios.API.Web
 {
     using log4net;
     using Newtonsoft.Json.Serialization;

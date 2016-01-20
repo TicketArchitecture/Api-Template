@@ -8,7 +8,7 @@ using log4net;
 using log4net.Core;
 using Ticket.API.Shared.Logging;
 
-namespace Ticket.Usuarios.API.V4.Web.Controllers
+namespace Ticket.Usuarios.API.Web.Controllers
 {
     public class DebugController : ApiController
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Ticket.Usuarios.Migrations;
 
-namespace Ticket.Usuarios.API.V4.Web
+namespace Ticket.Usuarios.API.Web
 {
     public class DebugMigrationDBConfig
     {

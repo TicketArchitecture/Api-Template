@@ -8,7 +8,7 @@ using Ticket.Usuarios.API.V4.Representations;
 using log4net;
 using System.Collections.Generic;
 
-namespace Ticket.Usuarios.API.V4.Web.Controllers
+namespace Ticket.Usuarios.API.Web.Controllers
 {
     public class UsuariosV4Controller : ApiController
     {

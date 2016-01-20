@@ -7,7 +7,7 @@ using Ticket.API.Shared;
 using Ticket.API.Shared.Filters;
 using Ticket.API.Shared.Logging;
 
-namespace Ticket.Usuarios.API.V4.Web
+namespace Ticket.Usuarios.API.Web
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

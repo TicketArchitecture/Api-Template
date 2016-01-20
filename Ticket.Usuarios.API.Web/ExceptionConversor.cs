@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Web.Http.ModelBinding;
 using Ticket.API.Shared.Infrastructure;
 
-namespace Ticket.Usuarios.API.V4.Web
+namespace Ticket.Usuarios.API.Web
 {
     static class ExceptionConversor
     {
